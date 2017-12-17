@@ -1,7 +1,5 @@
 package com.project.maven.calculator_monikas;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -9,7 +7,6 @@ import javax.swing.JTextField;
 import com.project.maven.calculator_monikas.classes.CalculatorAdvanced;
 import com.project.maven.calculator_monikas.classes.CalculatorBasic;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 
 import javax.swing.JButton;
