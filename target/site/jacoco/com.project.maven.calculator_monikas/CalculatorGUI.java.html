@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project-maven-reports</a> &gt; <a href="index.source.html" class="el_package">com.project.maven.calculator_monikas</a> &gt; <span class="el_source">CalculatorGUI.java</span></div><h1>CalculatorGUI.java</h1><pre class="source lang-java linenums">package com.project.maven.calculator_monikas;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+import com.project.maven.calculator_monikas.classes.CalculatorAdvanced;
+import com.project.maven.calculator_monikas.classes.CalculatorBasic;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
+
+public class CalculatorGUI implements ActionListener{
+	private JFrame frmCalculator;
+	private JTextField txfFirstNumber;
+	private JTextField txfSecondNumber;
+
+<span class="nc" id="L25">	private CalculatorBasic cb = new CalculatorBasic();</span>
+<span class="nc" id="L26">	private CalculatorAdvanced ca = new CalculatorAdvanced();</span>
+	
+<span class="nc" id="L28">	private JLabel lblResult = new JLabel(&quot;Result:&quot;);</span>
+	
+<span class="nc" id="L30">	private JLabel lblFirstNumber = new JLabel(&quot;x:&quot;);</span>
+<span class="nc" id="L31">	private JLabel lblSecondNumber = new JLabel(&quot;y:&quot;);</span>
+	
+<span class="nc" id="L33">	private JLabel lblBasic = new JLabel(&quot;Basic operations&quot;);</span>
+<span class="nc" id="L34">	private JButton btnAdd = new JButton(&quot;+&quot;);</span>
+<span class="nc" id="L35">	private JButton btnSubtract = new JButton(&quot;-&quot;);</span>
+<span class="nc" id="L36">	private JButton btnMultiply = new JButton(&quot;*&quot;);</span>
+<span class="nc" id="L37">	private JButton btnDivide = new JButton(&quot;/&quot;);</span>
+
+	/*
+	 * new buttons
+	 */
+
+<span class="nc" id="L43">	private JLabel lblAdvanced = new JLabel(&quot;Advanced operations (\&quot;y\&quot; not required)&quot;);</span>
+<span class="nc" id="L44">	private JButton btnPowerOfTwo = new JButton(&quot;x\u00B2&quot;);</span>
+<span class="nc" id="L45">	private JButton btnPowerOfThree = new JButton(&quot;x\u00B3&quot;);</span>
+<span class="nc" id="L46">	private JButton btnSquareRoot = new JButton(&quot;√x&quot;);</span>
+<span class="nc" id="L47">	private JButton btnCubeRoot = new JButton(&quot;∛x&quot;);</span>
+<span class="nc" id="L48">	private JButton btnAbsoluteValue = new JButton(&quot;|x|&quot;);</span>
+<span class="nc" id="L49">	private JButton btnOneDividedBy = new JButton(&quot;1/x&quot;);</span>
+		
+	/**
+	 * Create the application.
+	 */
+<span class="nc" id="L54">	public CalculatorGUI() {</span>
+<span class="nc" id="L55">		createAndShowGUI();</span>
+<span class="nc" id="L56">		addComponentsToFrame();</span>
+<span class="nc" id="L57">		addActionListeners();</span>
+<span class="nc" id="L58">	}</span>
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void createAndShowGUI() {
+<span class="nc" id="L64">		frmCalculator = new JFrame();</span>
+<span class="nc" id="L65">		frmCalculator.getContentPane().setBackground(Color.MAGENTA);</span>
+<span class="nc" id="L66">		frmCalculator.setTitle(&quot;Advanced Operations Calculator&quot;);</span>
+<span class="nc" id="L67">		frmCalculator.setBounds(100, 100, 330, 330);</span>
+<span class="nc" id="L68">		frmCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L69">		frmCalculator.getContentPane().setLayout(null);</span>
+		
+<span class="nc" id="L71">		txfFirstNumber = new JTextField();</span>
+<span class="nc" id="L72">		txfFirstNumber.setBounds(116, 27, 108, 20);</span>
+<span class="nc" id="L73">		frmCalculator.getContentPane().add(txfFirstNumber);</span>
+<span class="nc" id="L74">		txfFirstNumber.setColumns(10);</span>
+		
+<span class="nc" id="L76">		txfSecondNumber = new JTextField();</span>
+<span class="nc" id="L77">		txfSecondNumber.setBounds(116, 58, 108, 20);</span>
+<span class="nc" id="L78">		frmCalculator.getContentPane().add(txfSecondNumber);</span>
+<span class="nc" id="L79">		txfSecondNumber.setColumns(10);	</span>
+		
+<span class="nc" id="L81">		lblFirstNumber.setBounds(10, 30, 96, 14);</span>
+<span class="nc" id="L82">		lblSecondNumber.setBounds(10, 61, 96, 14);</span>
+<span class="nc" id="L83">		lblResult.setFont(new Font(&quot;Lucida Grande&quot;, Font.BOLD | Font.ITALIC, 13));</span>
+<span class="nc" id="L84">		lblResult.setBounds(10, 86, 223, 14);</span>
+
+<span class="nc" id="L86">		lblBasic.setBounds(10, 109, 135, 14);</span>
+		
+<span class="nc" id="L88">		btnAdd.setBounds(10, 139, 47, 23);</span>
+<span class="nc" id="L89">		btnSubtract.setBounds(67, 139, 48, 23);	</span>
+<span class="nc" id="L90">		btnMultiply.setBounds(125, 139, 47, 23);	</span>
+<span class="nc" id="L91">		btnDivide.setBounds(182, 139, 37, 23);	</span>
+
+<span class="nc" id="L93">		lblAdvanced.setBounds(10, 169, 275, 14);</span>
+
+<span class="nc" id="L95">		btnPowerOfTwo.setBounds(10, 199, 47, 23);</span>
+<span class="nc" id="L96">		btnPowerOfThree.setBounds(67, 199, 48, 23);	</span>
+<span class="nc" id="L97">		btnSquareRoot.setBounds(125, 199, 47, 23);	</span>
+<span class="nc" id="L98">		btnCubeRoot.setBounds(182, 199, 37, 23);	</span>
+
+<span class="nc" id="L100">		btnAbsoluteValue.setBounds(10, 229, 47, 23);</span>
+<span class="nc" id="L101">		btnOneDividedBy.setBounds(67, 229, 48, 23);	</span>
+		
+<span class="nc" id="L103">		frmCalculator.setVisible(true);</span>
+<span class="nc" id="L104">	}</span>
+	
+	/**
+	 * Adding components to frame.
+	 * @param none
+	 * @return none
+	 */
+	public void addComponentsToFrame(){
+<span class="nc" id="L112">		frmCalculator.getContentPane().add(lblFirstNumber);</span>
+<span class="nc" id="L113">		frmCalculator.getContentPane().add(lblSecondNumber);</span>
+<span class="nc" id="L114">		frmCalculator.getContentPane().add(lblResult);</span>
+<span class="nc" id="L115">		frmCalculator.getContentPane().add(lblBasic);</span>
+<span class="nc" id="L116">		frmCalculator.getContentPane().add(btnAdd);</span>
+<span class="nc" id="L117">		frmCalculator.getContentPane().add(btnSubtract);</span>
+<span class="nc" id="L118">		frmCalculator.getContentPane().add(btnMultiply);</span>
+<span class="nc" id="L119">		frmCalculator.getContentPane().add(btnDivide);</span>
+		
+<span class="nc" id="L121">		frmCalculator.getContentPane().add(lblAdvanced);</span>
+<span class="nc" id="L122">		frmCalculator.getContentPane().add(btnPowerOfTwo);</span>
+<span class="nc" id="L123">		frmCalculator.getContentPane().add(btnPowerOfThree);</span>
+<span class="nc" id="L124">		frmCalculator.getContentPane().add(btnSquareRoot);</span>
+<span class="nc" id="L125">		frmCalculator.getContentPane().add(btnCubeRoot);</span>
+<span class="nc" id="L126">		frmCalculator.getContentPane().add(btnAbsoluteValue);</span>
+<span class="nc" id="L127">		frmCalculator.getContentPane().add(btnOneDividedBy);</span>
+<span class="nc" id="L128">	}</span>
+		
+	
+	public void addActionListeners(){
+<span class="nc" id="L132">		btnAdd.addActionListener(this);</span>
+<span class="nc" id="L133">		btnSubtract.addActionListener(this);</span>
+<span class="nc" id="L134">		btnMultiply.addActionListener(this);</span>
+<span class="nc" id="L135">		btnDivide.addActionListener(this);</span>
+		
+		/*
+		 * new listeners
+		 */
+<span class="nc" id="L140">		btnPowerOfTwo.addActionListener(this);</span>
+<span class="nc" id="L141">		btnPowerOfThree.addActionListener(this);</span>
+<span class="nc" id="L142">		btnSquareRoot.addActionListener(this);</span>
+<span class="nc" id="L143">		btnCubeRoot.addActionListener(this);</span>
+<span class="nc" id="L144">		btnAbsoluteValue.addActionListener(this);</span>
+<span class="nc" id="L145">		btnOneDividedBy.addActionListener(this);</span>
+<span class="nc" id="L146">	}</span>
+
+	
+	/**
+	 *
+	 * get value from text field
+	 * 
+	 * @return firstNUmber - Number that is written in the textfield
+	 **/
+	public double getValueFromTextField1(){		
+<span class="nc" id="L156">		double firstNumber = 0.0;						</span>
+<span class="nc" id="L157">		firstNumber = Double.valueOf(txfFirstNumber.getText());		</span>
+<span class="nc" id="L158">		return firstNumber;		</span>
+	}
+	
+	public double getValueFromTextField2(){		
+<span class="nc" id="L162">		double secondNumber = 0.0;						</span>
+<span class="nc" id="L163">		secondNumber = Double.valueOf(txfSecondNumber.getText());		</span>
+<span class="nc" id="L164">		return secondNumber;		</span>
+	}	
+	
+	
+	
+	public void actionPerformed(ActionEvent e) {
+<span class="nc bnc" id="L170" title="All 2 branches missed.">		if (e.getSource() == btnAdd){</span>
+<span class="nc" id="L171">			double result = cb.add(getValueFromTextField1(), getValueFromTextField2());</span>
+<span class="nc" id="L172">			lblResult.setText(&quot;Result: &quot;+result);</span>
+		}		
+		
+<span class="nc bnc" id="L175" title="All 2 branches missed.">		if (e.getSource() == btnSubtract){</span>
+<span class="nc" id="L176">			double result = cb.subtract(getValueFromTextField1(), getValueFromTextField2());</span>
+<span class="nc" id="L177">			lblResult.setText(&quot;Result: &quot;+result);</span>
+		}
+		
+<span class="nc bnc" id="L180" title="All 2 branches missed.">		if (e.getSource() == btnMultiply){</span>
+<span class="nc" id="L181">			double result = cb.multiply(getValueFromTextField1(), getValueFromTextField2());</span>
+<span class="nc" id="L182">			lblResult.setText(&quot;Result: &quot;+result);</span>
+		}
+		
+<span class="nc bnc" id="L185" title="All 2 branches missed.">		if (e.getSource() == btnDivide){</span>
+<span class="nc bnc" id="L186" title="All 2 branches missed.">			if (getValueFromTextField2() != 0) {</span>
+<span class="nc" id="L187">				double result = cb.divide(getValueFromTextField1(), getValueFromTextField2());</span>
+<span class="nc" id="L188">				lblResult.setText(&quot;Result: &quot;+result);</span>
+<span class="nc" id="L189">			}</span>
+			else {
+<span class="nc" id="L191">				lblResult.setText(&quot;Result: division by zero&quot;);</span>
+			}
+		}		
+		
+		/*
+		 * new advanced functions
+		 */
+		
+<span class="nc bnc" id="L199" title="All 2 branches missed.">		if (e.getSource() == btnPowerOfTwo){</span>
+<span class="nc" id="L200">			double result = ca.raisedToThePowerOf2(getValueFromTextField1());</span>
+<span class="nc" id="L201">			lblResult.setText(&quot;Result: &quot;+result);</span>
+		}		
+
+<span class="nc bnc" id="L204" title="All 2 branches missed.">		if (e.getSource() == btnPowerOfThree){</span>
+<span class="nc" id="L205">			double result = ca.raisedToThePowerOf3(getValueFromTextField1());</span>
+<span class="nc" id="L206">			lblResult.setText(&quot;Result: &quot;+result);</span>
+		}		
+		
+<span class="nc bnc" id="L209" title="All 2 branches missed.">		if (e.getSource() == btnSquareRoot){</span>
+<span class="nc" id="L210">			double result = ca.squareRoot(getValueFromTextField1());</span>
+<span class="nc" id="L211">			lblResult.setText(&quot;Result: &quot;+result);</span>
+		}		
+		
+<span class="nc bnc" id="L214" title="All 2 branches missed.">		if (e.getSource() == btnCubeRoot){</span>
+<span class="nc" id="L215">			double result = ca.cubeRoot(getValueFromTextField1());</span>
+<span class="nc" id="L216">			lblResult.setText(&quot;Result: &quot;+result);</span>
+		}		
+		
+<span class="nc bnc" id="L219" title="All 2 branches missed.">		if (e.getSource() == btnAbsoluteValue){</span>
+<span class="nc" id="L220">			double result = ca.absoluteValue(getValueFromTextField1());</span>
+<span class="nc" id="L221">			lblResult.setText(&quot;Result: &quot;+result);</span>
+		}		
+		
+<span class="nc bnc" id="L224" title="All 2 branches missed.">		if (e.getSource() == btnOneDividedBy){</span>
+<span class="nc" id="L225">			double result = ca.oneDividedBy(getValueFromTextField1());</span>
+<span class="nc bnc" id="L226" title="All 2 branches missed.">			if (result != -0.123456789) { </span>
+<span class="nc" id="L227">				lblResult.setText(&quot;Result: &quot;+result);</span>
+			}
+			else {
+<span class="nc" id="L230">				lblResult.setText(&quot;Result: division by zero&quot;);</span>
+			}
+		}		
+		
+<span class="nc" id="L234">	}	</span>
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

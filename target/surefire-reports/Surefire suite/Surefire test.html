@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>30/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Dec 18 00:14:06 CET 2017</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (891 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.test1DividedByNegativeNumbers()'><b>test1DividedByNegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>test1DividedByNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.test1DividedByPositiveNumbers()'><b>test1DividedByPositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>test1DividedByPositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testAbsoluteValueNegativeNumbers()'><b>testAbsoluteValueNegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testAbsoluteValueNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testAbsoluteValuePositiveNumbers()'><b>testAbsoluteValuePositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testAbsoluteValuePositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testAbsoluteValueWithZero()'><b>testAbsoluteValueWithZero</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testAbsoluteValueWithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testAddNegativeNumbers()'><b>testAddNegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testAddNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testAddPositiveNumbers()'><b>testAddPositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testAddPositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testAddZeros()'><b>testAddZeros</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testAddZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testCubeRooWithZero()'><b>testCubeRooWithZero</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testCubeRooWithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testCubeRootNegativeNumbers()'><b>testCubeRootNegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testCubeRootNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testCubeRootPositiveNumbers()'><b>testCubeRootPositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testCubeRootPositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testDividePositiveNumbers()'><b>testDividePositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testDividePositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testDivideZeros()'><b>testDivideZeros</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testDivideZeros(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testDivideZeros()'><b>testDivideZeros</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testDivideZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testDivisionNegativeNumbers()'><b>testDivisionNegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testDivisionNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testMultiplyNegativeNumbers()'><b>testMultiplyNegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testMultiplyNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testMultiplyPositiveNumbers()'><b>testMultiplyPositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testMultiplyPositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testMultiplyZeros()'><b>testMultiplyZeros</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testMultiplyZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testRaisedToPowerOf2NegativeNumbers()'><b>testRaisedToPowerOf2NegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testRaisedToPowerOf2NegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testRaisedToPowerOf2PositiveNumbers()'><b>testRaisedToPowerOf2PositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testRaisedToPowerOf2PositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testRaisedToPowerOf2WithZero()'><b>testRaisedToPowerOf2WithZero</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testRaisedToPowerOf2WithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testRaisedToPowerOf3NegativeNumbers()'><b>testRaisedToPowerOf3NegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testRaisedToPowerOf3NegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testRaisedToPowerOf3PositiveNumbers()'><b>testRaisedToPowerOf3PositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testRaisedToPowerOf3PositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testRaisedToPowerOf3WithZero()'><b>testRaisedToPowerOf3WithZero</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testRaisedToPowerOf3WithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testSquareRooWithZero()'><b>testSquareRooWithZero</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testSquareRooWithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testSquareRootNegativeNumbers()'><b>testSquareRootNegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testSquareRootNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorAdvancedTest.testSquareRootPositiveNumbers()'><b>testSquareRootPositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorAdvancedTest</td>
+<td></td>
+<td>0</td>
+<td>testSquareRootPositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testSubtractNegativeNumbers()'><b>testSubtractNegativeNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testSubtractNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testSubtractPositiveNumbers()'><b>testSubtractPositiveNumbers</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testSubtractPositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+<tr>
+<td title='com.project.maven.calculator_monikas.CalculatorBasicTest.testSubtractZeros()'><b>testSubtractZeros</b><br>Test class: com.project.maven.calculator_monikas.CalculatorBasicTest</td>
+<td></td>
+<td>0</td>
+<td>testSubtractZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)</td></tr>
+</table><p>
+</body>
+</html>

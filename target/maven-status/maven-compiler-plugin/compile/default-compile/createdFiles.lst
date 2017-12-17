@@ -1,0 +1,6 @@
+com/project/maven/calculator_monikas/CalculatorGUI.class
+com/project/maven/calculator_monikas/interfaces/CalculatorBasicOperationsInterface.class
+com/project/maven/calculator_monikas/Main.class
+com/project/maven/calculator_monikas/classes/CalculatorBasic.class
+com/project/maven/calculator_monikas/classes/CalculatorAdvanced.class
+com/project/maven/calculator_monikas/interfaces/CalculatorAdvancedOperationsInterface.class

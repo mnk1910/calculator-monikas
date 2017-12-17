@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorAdvanced.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project-maven-reports</a> &gt; <a href="index.source.html" class="el_package">com.project.maven.calculator_monikas.classes</a> &gt; <span class="el_source">CalculatorAdvanced.java</span></div><h1>CalculatorAdvanced.java</h1><pre class="source lang-java linenums">package com.project.maven.calculator_monikas.classes;
+
+import com.project.maven.calculator_monikas.interfaces.CalculatorAdvancedOperationsInterface;
+
+/**
+ * Class CalculatorAdvanced - it is a subclass of class CalculatorBasics,
+ * it implements an interface CalculatorAdvancedOperationsInterface and
+ * contains six methods that perform advanced mathematical operations
+ * @author Monika - mnk1910
+ *
+ */
+
+<span class="fc" id="L13">public class CalculatorAdvanced extends CalculatorBasic implements CalculatorAdvancedOperationsInterface {</span>
+
+	/**
+	 * raisedToThePowerOf2 method - raises a double number to the power of 2
+	 * @param base: the number to be raised to the power of 2 as a double
+	 * 
+	 * @return: a double as the result of raising to the power of 2
+	 */
+	public double raisedToThePowerOf2(double base) {
+<span class="fc" id="L22">		return Math.pow(base, 2.0);</span>
+	}
+	
+	/**
+	 * raisedToThePowerOf3 method - raises a double number to the power of 3
+	 * @param base: the number to be raised to the power of 3 as a double
+	 * 
+	 * @return: a double as the result of raising to the power of 3
+	 */
+	public double raisedToThePowerOf3(double base) {
+<span class="fc" id="L32">		return Math.pow(base, 3.0);</span>
+	}
+	
+	/**
+	 * squareRoot - method that returns the correctly rounded positive square root of a double value
+	 * @param number: a double
+	 * @return: a double
+	 */
+	public double squareRoot(double number) {
+<span class="fc" id="L41">		return Math.sqrt(number);</span>
+	}
+	
+	/**
+	 * cubeRoot - method that returns the cube root of a double value
+	 * @param number: a double
+	 * @return: a double
+	 */
+	public double cubeRoot(double number) {
+<span class="fc" id="L50">		return Math.cbrt(number);</span>
+	}
+	
+	/**
+	 * abs - method that returns the absolute value of a double value
+	 * @param number: the argument whose absolute value is to be determined
+	 * @return: the absolute value of the argument as a double
+	 */
+	public double absoluteValue(double number) {
+<span class="fc" id="L59">		return Math.abs(number);</span>
+	}
+	
+	/**
+	 * oneDividedByValue - method that returns the result of 1 divided by a double value
+	 * @param value: a double that is the dividend to 1
+	 * @return: the division between 1 and a value, as a double 
+	 */
+	public double oneDividedBy(double value) {
+<span class="fc" id="L68">		double result = 1/value;</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">		if (value == 0) {</span>
+			//JOptionPane.showMessageDialog(null, &quot;Operation not possible, division by zero!&quot;, &quot;Error message&quot;, JOptionPane.ERROR_MESSAGE);
+<span class="fc" id="L71">			System.out.println(&quot;Division by zero?&quot;);</span>
+<span class="fc" id="L72">			return -0.123456789;</span>
+		}
+<span class="fc" id="L74">		return result;</span>
+	}
+	
+	/*
+	 * randomNumber - method that returns a pseudorandom double
+	 * @param none
+	 * @return: a double greater than or equal to 0.0 and less than 1.0
+	 */
+	/*
+	public double randomNumberBetween0and1() {
+		return Math.random();
+	}
+	*/
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
