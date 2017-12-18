@@ -15,27 +15,27 @@ public interface CalculatorBasicOperationsInterface {
 	 * @param firstNumber: the first number as a double
 	 * @param secondNumber: the second number as a double
 	 **/
-	public abstract double add(double firstNumber, double secondNumber);
+	public double add(double firstNumber, double secondNumber);
 
 	/**
 	 * Subtract method - subtracts two doubles
 	 * @param firstNumber: the first number as a double
 	 * @param secondNumber: the second number as a double
 	 */
-	public abstract double subtract(double firstNumber, double secondNumber);
+	public double subtract(double firstNumber, double secondNumber);
 
 	/**
 	 * Multiply method - multiplies two doubles
 	 * @param firstNumber: the first number as a double
 	 * @param secondNumber: the second number as a double
 	 */
-	public abstract double multiply(double firstNumber, double secondNumber);
+	public double multiply(double firstNumber, double secondNumber);
 
 	/**
 	 * Divide method - divides two doubles
 	 * @param firstNumber: the first number as a double
 	 * @param secondNumber: the second number as a double
 	 */
-	public abstract double divide(double firstNumber, double secondNumber);
+	public double divide(double firstNumber, double secondNumber);
 
 }

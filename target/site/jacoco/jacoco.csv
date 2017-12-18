@@ -1,5 +1,5 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-project-maven-reports,com.project.maven.calculator_monikas.classes,CalculatorAdvanced,0,35,0,2,0,11,0,8,0,7
-project-maven-reports,com.project.maven.calculator_monikas.classes,CalculatorBasic,0,30,0,2,0,9,0,6,0,5
-project-maven-reports,com.project.maven.calculator_monikas,CalculatorGUI,719,0,24,0,123,0,19,0,7,0
+project-maven-reports,com.project.maven.calculator_monikas.classes,CalculatorAdvanced,0,42,0,4,0,14,0,10,0,8
+project-maven-reports,com.project.maven.calculator_monikas.classes,CalculatorBasic,0,50,0,8,0,15,0,9,0,5
+project-maven-reports,com.project.maven.calculator_monikas,CalculatorGUI,907,0,58,0,172,0,36,0,7,0
 project-maven-reports,com.project.maven.calculator_monikas,Main,8,0,0,0,3,0,2,0,2,0

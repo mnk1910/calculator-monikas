@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorBasic.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project-maven-reports</a> &gt; <a href="index.source.html" class="el_package">com.project.maven.calculator_monikas.classes</a> &gt; <span class="el_source">CalculatorBasic.java</span></div><h1>CalculatorBasic.java</h1><pre class="source lang-java linenums">
 package com.project.maven.calculator_monikas.classes;
 
-import javax.swing.JOptionPane;
-
 import com.project.maven.calculator_monikas.interfaces.CalculatorBasicOperationsInterface;
 
 /**
@@ -10,65 +8,66 @@ import com.project.maven.calculator_monikas.interfaces.CalculatorBasicOperations
  * addition, subtraction, multiplication and division
  * it also implements an interface CalculatorBasicOperationsInterface
  * @author Monika - mnk1910
+ * @version 1.0
  */
 
-<span class="fc" id="L15">public class CalculatorBasic implements CalculatorBasicOperationsInterface {</span>
+<span class="fc" id="L14">public class CalculatorBasic implements CalculatorBasicOperationsInterface {</span>
 
 	/**
 	 * Add method - adds two doubles
 	 * @param firstNumber: the first number as a double
 	 * @param secondNumber: the second number as a double
-	 * @return: the result of the addition, as a double
+	 * @return result: the result of the addition, as a double
 	 */
 	public double add(double firstNumber, double secondNumber){
-<span class="fc" id="L24">		return firstNumber+secondNumber;</span>
+<span class="fc" id="L23">		double result = firstNumber+secondNumber;</span>
+<span class="fc" id="L24">		return result;</span>
 	}
-	
+
 	/**
 	 * Subtract method - subtracts two doubles
 	 * @param firstNumber: the first number as a double
 	 * @param secondNumber: the second number as a double
-	 * @return: the result of the subtraction, as a double
+	 * @return result: the result of the subtraction, as a double
 	 */
 	public double subtract(double firstNumber, double secondNumber){
-<span class="fc" id="L34">		return firstNumber-secondNumber;</span>
+<span class="fc" id="L34">		double result = firstNumber-secondNumber;</span>
+<span class="fc" id="L35">		return result;</span>
 	}
-	
+
 	/**
 	 * Multiply method - multiplies two doubles
 	 * @param firstNumber: the first number as a double
 	 * @param secondNumber: the second number as a double
-	 * @return: the result of the multiplication as a double
+	 * @return result: the result of the multiplication as a double
 	 */
 	public double multiply(double firstNumber, double secondNumber){
-<span class="fc" id="L44">		return firstNumber*secondNumber;</span>
+<span class="fc" id="L45">		double result = firstNumber*secondNumber;</span>
+<span class="fc bfc" id="L46" title="All 4 branches covered.">		if (firstNumber == 0 || secondNumber == 0) {</span>
+<span class="fc" id="L47">			return 0;</span>
+		}
+<span class="fc" id="L49">		return result;</span>
 	}
-	
+
 	/**
 	 * Divide method - divides two doubles
 	 * @param firstNumber: the first number as a double
 	 * @param secondNumber: the second number as a double
-	 * @return: result, the result of the division as a double
+	 * @return result: the result of the division as a double
 	 */
-	public double divide(double firstNumber, double secondNumber){		
-<span class="fc" id="L54">		double result = firstNumber / secondNumber;</span>
-		
-		
-<span class="fc bfc" id="L57" title="All 2 branches covered.">		if (secondNumber ==0) {</span>
-<span class="fc" id="L58">			System.out.println(&quot;Division by zero?&quot;);</span>
-<span class="fc" id="L59">			return -0.123456789;</span>
-		}		
-		
-		/*if (Double.isInfinite(result)){
-			JOptionPane.showMessageDialog(null, &quot;Operation not possible, division by zero!&quot;, &quot;Error message&quot;, JOptionPane.ERROR_MESSAGE);			
-			return -0.123456789;
-		}	
-		else if (firstNumber == 0 &amp;&amp; secondNumber == 0 ) {
-			JOptionPane.showMessageDialog(null, &quot;Operation not possible, division by zero!&quot;, &quot;Error message&quot;, JOptionPane.ERROR_MESSAGE);			
-			return -0.1234567891;
-		}*/
-		
-<span class="fc" id="L71">		return result;	</span>
+	public double divide(double firstNumber, double secondNumber){
+		double result;
+<span class="fc bfc" id="L60" title="All 2 branches covered.">		if (firstNumber == 0) {</span>
+<span class="fc" id="L61">			result = 0;</span>
+		}
+<span class="fc bfc" id="L63" title="All 2 branches covered.">		else if (secondNumber == 0) {</span>
+			//System.out.println(&quot;Division by zero?&quot;);
+<span class="fc" id="L65">			return -0.123456789;</span>
+		}
+		else {
+<span class="fc" id="L68">			result = firstNumber / secondNumber;</span>
+		}
+<span class="fc" id="L70">		return result;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

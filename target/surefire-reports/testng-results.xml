@@ -1,131 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="30" passed="30">
+<testng-results skipped="0" failed="0" total="31" passed="31">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="891" started-at="2017-12-17T23:14:06Z" finished-at="2017-12-17T23:14:07Z">
+  <suite name="Surefire suite" duration-ms="723" started-at="2017-12-18T17:48:42Z" finished-at="2017-12-18T17:48:43Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="891" started-at="2017-12-17T23:14:06Z" finished-at="2017-12-17T23:14:07Z">
+    <test name="Surefire test" duration-ms="723" started-at="2017-12-18T17:48:42Z" finished-at="2017-12-18T17:48:43Z">
       <class name="com.project.maven.calculator_monikas.CalculatorBasicTest">
-        <test-method status="PASS" signature="testDivideZeros()[pri:0, instance:testDivideZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testDivideZeros" duration-ms="25" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testDivideZeros()[pri:0, instance:testDivideZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testDivideZeros" duration-ms="108" started-at="2017-12-18T18:48:42Z" finished-at="2017-12-18T18:48:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDivideZeros -->
-        <test-method status="PASS" signature="testMultiplyPositiveNumbers()[pri:0, instance:testMultiplyPositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testMultiplyPositiveNumbers" duration-ms="22" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testMultiplyPositiveNumbers()[pri:0, instance:testMultiplyPositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testMultiplyPositiveNumbers" duration-ms="32" started-at="2017-12-18T18:48:42Z" finished-at="2017-12-18T18:48:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMultiplyPositiveNumbers -->
-        <test-method status="PASS" signature="testMultiplyNegativeNumbers()[pri:0, instance:testMultiplyNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testMultiplyNegativeNumbers" duration-ms="33" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testMultiplyNegativeNumbers()[pri:0, instance:testMultiplyNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testMultiplyNegativeNumbers" duration-ms="45" started-at="2017-12-18T18:48:42Z" finished-at="2017-12-18T18:48:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMultiplyNegativeNumbers -->
-        <test-method status="PASS" signature="testAddZeros()[pri:0, instance:testAddZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testAddZeros" duration-ms="43" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testAddZeros()[pri:0, instance:testAddZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testAddZeros" duration-ms="83" started-at="2017-12-18T18:48:42Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddZeros -->
-        <test-method status="PASS" signature="testAddPositiveNumbers()[pri:0, instance:testAddPositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testAddPositiveNumbers" duration-ms="11" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testAddPositiveNumbers()[pri:0, instance:testAddPositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testAddPositiveNumbers" duration-ms="9" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddPositiveNumbers -->
-        <test-method status="PASS" signature="testAddNegativeNumbers()[pri:0, instance:testAddNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testAddNegativeNumbers" duration-ms="9" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testAddNegativeNumbers()[pri:0, instance:testAddNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testAddNegativeNumbers" duration-ms="22" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddNegativeNumbers -->
-        <test-method status="PASS" signature="testDividePositiveNumbers()[pri:0, instance:testDividePositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testDividePositiveNumbers" duration-ms="31" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testDividePositiveNumbers()[pri:0, instance:testDividePositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testDividePositiveNumbers" duration-ms="18" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDividePositiveNumbers -->
-        <test-method status="PASS" signature="testDivisionNegativeNumbers()[pri:0, instance:testDivisionNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testDivisionNegativeNumbers" duration-ms="9" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testDivisionNegativeNumbers()[pri:0, instance:testDivisionNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testDivisionNegativeNumbers" duration-ms="12" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDivisionNegativeNumbers -->
-        <test-method status="PASS" signature="testSubtractPositiveNumbers()[pri:0, instance:testSubtractPositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testSubtractPositiveNumbers" duration-ms="35" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testSubtractPositiveNumbers()[pri:0, instance:testSubtractPositiveNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testSubtractPositiveNumbers" duration-ms="18" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubtractPositiveNumbers -->
-        <test-method status="PASS" signature="testSubtractNegativeNumbers()[pri:0, instance:testSubtractNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testSubtractNegativeNumbers" duration-ms="14" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testSubtractNegativeNumbers()[pri:0, instance:testSubtractNegativeNumbers(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testSubtractNegativeNumbers" duration-ms="21" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubtractNegativeNumbers -->
-        <test-method status="PASS" signature="testMultiplyZeros()[pri:0, instance:testMultiplyZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testMultiplyZeros" duration-ms="31" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testMultiplyZeros()[pri:0, instance:testMultiplyZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testMultiplyZeros" duration-ms="19" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMultiplyZeros -->
-        <test-method status="PASS" signature="testSubtractZeros()[pri:0, instance:testSubtractZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testSubtractZeros" duration-ms="15" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testSubtractZeros()[pri:0, instance:testSubtractZeros(com.project.maven.calculator_monikas.CalculatorBasicTest)]" name="testSubtractZeros" duration-ms="43" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubtractZeros -->
       </class> <!-- com.project.maven.calculator_monikas.CalculatorBasicTest -->
       <class name="com.project.maven.calculator_monikas.CalculatorAdvancedTest">
-        <test-method status="PASS" signature="testDivideZeros()[pri:0, instance:testDivideZeros(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testDivideZeros" duration-ms="17" started-at="2017-12-18T00:14:06Z" finished-at="2017-12-18T00:14:06Z">
+        <test-method status="PASS" signature="testDivideZeros()[pri:0, instance:testDivideZeros(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testDivideZeros" duration-ms="0" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDivideZeros -->
-        <test-method status="PASS" signature="testSquareRootPositiveNumbers()[pri:0, instance:testSquareRootPositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testSquareRootPositiveNumbers" duration-ms="61" started-at="2017-12-18T00:14:06Z" finished-at="2017-12-18T00:14:06Z">
+        <test-method status="PASS" signature="testSquareRootPositiveNumbers()[pri:0, instance:testSquareRootPositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testSquareRootPositiveNumbers" duration-ms="13" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSquareRootPositiveNumbers -->
-        <test-method status="PASS" signature="testAbsoluteValueWithZero()[pri:0, instance:testAbsoluteValueWithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testAbsoluteValueWithZero" duration-ms="48" started-at="2017-12-18T00:14:06Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testAbsoluteValueWithZero()[pri:0, instance:testAbsoluteValueWithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testAbsoluteValueWithZero" duration-ms="9" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAbsoluteValueWithZero -->
-        <test-method status="PASS" signature="testSquareRootNegativeNumbers()[pri:0, instance:testSquareRootNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testSquareRootNegativeNumbers" duration-ms="53" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testSquareRootNegativeNumbers()[pri:0, instance:testSquareRootNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testSquareRootNegativeNumbers" duration-ms="7" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSquareRootNegativeNumbers -->
-        <test-method status="PASS" signature="testSquareRooWithZero()[pri:0, instance:testSquareRooWithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testSquareRooWithZero" duration-ms="36" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testSquareRooWithZero()[pri:0, instance:testSquareRooWithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testSquareRooWithZero" duration-ms="5" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSquareRooWithZero -->
-        <test-method status="PASS" signature="testCubeRootPositiveNumbers()[pri:0, instance:testCubeRootPositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testCubeRootPositiveNumbers" duration-ms="27" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testCubeRootPositiveNumbers()[pri:0, instance:testCubeRootPositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testCubeRootPositiveNumbers" duration-ms="6" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCubeRootPositiveNumbers -->
-        <test-method status="PASS" signature="testRaisedToPowerOf3WithZero()[pri:0, instance:testRaisedToPowerOf3WithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf3WithZero" duration-ms="44" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testRaisedToPowerOf3WithZero()[pri:0, instance:testRaisedToPowerOf3WithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf3WithZero" duration-ms="8" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRaisedToPowerOf3WithZero -->
-        <test-method status="PASS" signature="testCubeRootNegativeNumbers()[pri:0, instance:testCubeRootNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testCubeRootNegativeNumbers" duration-ms="33" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testCubeRootNegativeNumbers()[pri:0, instance:testCubeRootNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testCubeRootNegativeNumbers" duration-ms="5" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCubeRootNegativeNumbers -->
-        <test-method status="PASS" signature="testCubeRooWithZero()[pri:0, instance:testCubeRooWithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testCubeRooWithZero" duration-ms="23" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testCubeRooWithZero()[pri:0, instance:testCubeRooWithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testCubeRooWithZero" duration-ms="9" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCubeRooWithZero -->
-        <test-method status="PASS" signature="testAbsoluteValuePositiveNumbers()[pri:0, instance:testAbsoluteValuePositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testAbsoluteValuePositiveNumbers" duration-ms="22" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testAbsoluteValuePositiveNumbers()[pri:0, instance:testAbsoluteValuePositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testAbsoluteValuePositiveNumbers" duration-ms="12" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAbsoluteValuePositiveNumbers -->
-        <test-method status="PASS" signature="testAbsoluteValueNegativeNumbers()[pri:0, instance:testAbsoluteValueNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testAbsoluteValueNegativeNumbers" duration-ms="20" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testRandomValuePositiveNumbers()[pri:0, instance:testRandomValuePositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRandomValuePositiveNumbers" duration-ms="8" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRandomValuePositiveNumbers -->
+        <test-method status="PASS" signature="testAbsoluteValueNegativeNumbers()[pri:0, instance:testAbsoluteValueNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testAbsoluteValueNegativeNumbers" duration-ms="11" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAbsoluteValueNegativeNumbers -->
-        <test-method status="PASS" signature="test1DividedByPositiveNumbers()[pri:0, instance:test1DividedByPositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="test1DividedByPositiveNumbers" duration-ms="31" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="test1DividedByPositiveNumbers()[pri:0, instance:test1DividedByPositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="test1DividedByPositiveNumbers" duration-ms="8" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1DividedByPositiveNumbers -->
-        <test-method status="PASS" signature="test1DividedByNegativeNumbers()[pri:0, instance:test1DividedByNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="test1DividedByNegativeNumbers" duration-ms="11" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="test1DividedByNegativeNumbers()[pri:0, instance:test1DividedByNegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="test1DividedByNegativeNumbers" duration-ms="8" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1DividedByNegativeNumbers -->
-        <test-method status="PASS" signature="testRaisedToPowerOf3PositiveNumbers()[pri:0, instance:testRaisedToPowerOf3PositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf3PositiveNumbers" duration-ms="9" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testRaisedToPowerOf3PositiveNumbers()[pri:0, instance:testRaisedToPowerOf3PositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf3PositiveNumbers" duration-ms="9" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRaisedToPowerOf3PositiveNumbers -->
-        <test-method status="PASS" signature="testRaisedToPowerOf2WithZero()[pri:0, instance:testRaisedToPowerOf2WithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf2WithZero" duration-ms="8" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testRaisedToPowerOf2WithZero()[pri:0, instance:testRaisedToPowerOf2WithZero(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf2WithZero" duration-ms="6" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRaisedToPowerOf2WithZero -->
-        <test-method status="PASS" signature="testRaisedToPowerOf3NegativeNumbers()[pri:0, instance:testRaisedToPowerOf3NegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf3NegativeNumbers" duration-ms="11" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testRaisedToPowerOf3NegativeNumbers()[pri:0, instance:testRaisedToPowerOf3NegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf3NegativeNumbers" duration-ms="5" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRaisedToPowerOf3NegativeNumbers -->
-        <test-method status="PASS" signature="testRaisedToPowerOf2PositiveNumbers()[pri:0, instance:testRaisedToPowerOf2PositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf2PositiveNumbers" duration-ms="13" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testRaisedToPowerOf2PositiveNumbers()[pri:0, instance:testRaisedToPowerOf2PositiveNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf2PositiveNumbers" duration-ms="6" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRaisedToPowerOf2PositiveNumbers -->
-        <test-method status="PASS" signature="testRaisedToPowerOf2NegativeNumbers()[pri:0, instance:testRaisedToPowerOf2NegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf2NegativeNumbers" duration-ms="15" started-at="2017-12-18T00:14:07Z" finished-at="2017-12-18T00:14:07Z">
+        <test-method status="PASS" signature="testRaisedToPowerOf2NegativeNumbers()[pri:0, instance:testRaisedToPowerOf2NegativeNumbers(com.project.maven.calculator_monikas.CalculatorAdvancedTest)]" name="testRaisedToPowerOf2NegativeNumbers" duration-ms="14" started-at="2017-12-18T18:48:43Z" finished-at="2017-12-18T18:48:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRaisedToPowerOf2NegativeNumbers -->

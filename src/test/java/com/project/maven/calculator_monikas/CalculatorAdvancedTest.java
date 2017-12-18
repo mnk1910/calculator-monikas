@@ -329,7 +329,7 @@ public class CalculatorAdvancedTest {
 	/*
 	 * IMPLEMENTATION OF THE TEST METHODS FOR RANDOM VALUE BETWEEN 0 AND 1
 	 */
-	/*
+	
 	@Test
 	public void testRandomValuePositiveNumbers() {
 
@@ -345,5 +345,5 @@ public class CalculatorAdvancedTest {
 
 		}
 	}
-	*/
+	
 }

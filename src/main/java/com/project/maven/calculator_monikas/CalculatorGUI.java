@@ -2,51 +2,83 @@ package com.project.maven.calculator_monikas;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import com.project.maven.calculator_monikas.classes.CalculatorAdvanced;
 import com.project.maven.calculator_monikas.classes.CalculatorBasic;
 
 import java.awt.Color;
+import java.awt.EventQueue;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.SwingConstants;
+
+
+/**
+ * Main frame of the calculator GUI.
+ * @author Monika - mnk1910
+ * @version 1.0
+ */
 
 public class CalculatorGUI implements ActionListener{
-	private JFrame frmCalculator;
-	private JTextField txfFirstNumber;
-	private JTextField txfSecondNumber;
-
+	
+	/**
+	 * Attributes
+	 */
 	private CalculatorBasic cb = new CalculatorBasic();
 	private CalculatorAdvanced ca = new CalculatorAdvanced();
+	
+	private JFrame frameCalculator;
+	private JTextField fieldFirstNumber;
+	private JTextField fieldSecondNumber;
+	private JTextField fieldResult;
 
-	private JLabel lblResult = new JLabel("Result:");
-
-	private JLabel lblFirstNumber = new JLabel("x:");
-	private JLabel lblSecondNumber = new JLabel("y:");
-
-	private JLabel lblBasic = new JLabel("Basic operations");
-	private JButton btnAdd = new JButton("+");
-	private JButton btnSubtract = new JButton("-");
-	private JButton btnMultiply = new JButton("*");
-	private JButton btnDivide = new JButton("/");
+	private JLabel labelFirstNumber = new JLabel("First number (x):");
+	private JLabel labelSecondNumber = new JLabel("Second number (y):");
+	private JLabel labelResult = new JLabel("RESULT:");
+	
+	private JLabel labelBasic = new JLabel("Basic operations");
+	private JButton btnAdd = new JButton("x+y");
+	private JButton btnSubtract = new JButton("x-y");
+	private JButton btnMultiply = new JButton("x*y");
+	private JButton btnDivide = new JButton("x/y");
 
 	/*
-	 * new buttons
+	 * advanced operations buttons
 	 */
-
-	private JLabel lblAdvanced = new JLabel("Advanced operations (\"y\" not required)");
+	private JLabel labelAdvanced = new JLabel("Advanced operations (\"y\" not required)");
 	private JButton btnPowerOfTwo = new JButton("x\u00B2");
 	private JButton btnPowerOfThree = new JButton("x\u00B3");
 	private JButton btnSquareRoot = new JButton("√x");
 	private JButton btnCubeRoot = new JButton("∛x");
 	private JButton btnAbsoluteValue = new JButton("|x|");
 	private JButton btnOneDividedBy = new JButton("1/x");
+	private JButton btnRandom = new JButton("rand");
+	private JButton btnClearAll = new JButton("CLEAR");
 
 	/**
-	 * Create the application.
+	 * Launch the application.
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					CalculatorGUI window = new CalculatorGUI();
+					window.frameCalculator.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
+	/**
+	 * This is a constructor method for creating the application.
 	 */
 	public CalculatorGUI() {
 		createAndShowGUI();
@@ -55,179 +87,271 @@ public class CalculatorGUI implements ActionListener{
 	}
 
 	/**
-	 * Initialize the contents of the frame.
+	 * Initialize the contents of the frame
 	 */
 	private void createAndShowGUI() {
-		frmCalculator = new JFrame();
-		frmCalculator.getContentPane().setBackground(Color.MAGENTA);
-		frmCalculator.setTitle("Advanced Operations Calculator");
-		frmCalculator.setBounds(100, 100, 330, 330);
-		frmCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmCalculator.getContentPane().setLayout(null);
+		frameCalculator = new JFrame();
+		frameCalculator.getContentPane().setBackground(new Color(221, 160, 221));
+		frameCalculator.setTitle("Advanced Operations Calculator");
+		frameCalculator.setBounds(100, 100, 330, 330);
+		frameCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameCalculator.getContentPane().setLayout(null);
 
-		txfFirstNumber = new JTextField();
-		txfFirstNumber.setBounds(116, 27, 108, 20);
-		frmCalculator.getContentPane().add(txfFirstNumber);
-		txfFirstNumber.setColumns(10);
+		fieldFirstNumber = new JTextField();
+		fieldFirstNumber.setHorizontalAlignment(SwingConstants.TRAILING);
+		fieldFirstNumber.setBounds(130, 26, 150, 20);
+		frameCalculator.getContentPane().add(fieldFirstNumber);
+		fieldFirstNumber.setColumns(10);
 
-		txfSecondNumber = new JTextField();
-		txfSecondNumber.setBounds(116, 58, 108, 20);
-		frmCalculator.getContentPane().add(txfSecondNumber);
-		txfSecondNumber.setColumns(10);
+		fieldSecondNumber = new JTextField();
+		fieldSecondNumber.setHorizontalAlignment(SwingConstants.TRAILING);
+		fieldSecondNumber.setBounds(130, 58, 150, 20);
+		frameCalculator.getContentPane().add(fieldSecondNumber);
+		fieldSecondNumber.setColumns(10);
 
-		lblFirstNumber.setBounds(10, 30, 96, 14);
-		lblSecondNumber.setBounds(10, 61, 96, 14);
-		lblResult.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		lblResult.setBounds(10, 86, 223, 14);
+		fieldResult = new JTextField();
+		fieldResult.setBounds(74, 90, 206, 20);
+		frameCalculator.getContentPane().add(fieldResult);
+		fieldResult.setColumns(10);
 
-		lblBasic.setBounds(10, 109, 135, 14);
+		labelFirstNumber.setBounds(10, 30, 125, 14);
+		labelSecondNumber.setBounds(10, 61, 125, 14);
+		labelResult.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		labelResult.setBounds(10, 93, 150, 14);
+		
+		labelBasic.setBounds(10, 122, 135, 14);
 
-		btnAdd.setBounds(10, 139, 47, 23);
-		btnSubtract.setBounds(67, 139, 48, 23);
-		btnMultiply.setBounds(125, 139, 47, 23);
-		btnDivide.setBounds(182, 139, 37, 23);
+		btnAdd.setBounds(10, 142, 64, 23);
+		btnSubtract.setBounds(80, 142, 64, 23);
+		btnMultiply.setBounds(150, 142, 64, 23);
+		btnDivide.setBounds(220, 142, 64, 23);
 
-		lblAdvanced.setBounds(10, 169, 275, 14);
+		labelAdvanced.setBounds(10, 177, 260, 14);
 
-		btnPowerOfTwo.setBounds(10, 199, 47, 23);
-		btnPowerOfThree.setBounds(67, 199, 48, 23);
-		btnSquareRoot.setBounds(125, 199, 47, 23);
-		btnCubeRoot.setBounds(182, 199, 37, 23);
+		btnPowerOfTwo.setBounds(10, 199, 64, 23);
+		btnPowerOfThree.setBounds(80, 199, 64, 23);
+		btnSquareRoot.setBounds(150, 199, 64, 23);
+		btnCubeRoot.setBounds(220, 199, 64, 23);
 
-		btnAbsoluteValue.setBounds(10, 229, 47, 23);
-		btnOneDividedBy.setBounds(67, 229, 48, 23);
+		btnAbsoluteValue.setBounds(10, 229, 64, 23);
+		btnOneDividedBy.setBounds(80, 229, 64, 23);
+		btnRandom.setBounds(150, 229, 64, 23);
+		btnClearAll.setBounds(220, 229, 64, 23);
 
-		frmCalculator.setVisible(true);
+		frameCalculator.setVisible(true);
 	}
 
 	/**
-	 * Adding components to frame.
-	 * @param none
-	 * @return none
+	 * Method that adds components to the frame.
 	 */
 	public void addComponentsToFrame(){
-		frmCalculator.getContentPane().add(lblFirstNumber);
-		frmCalculator.getContentPane().add(lblSecondNumber);
-		frmCalculator.getContentPane().add(lblResult);
-		frmCalculator.getContentPane().add(lblBasic);
-		frmCalculator.getContentPane().add(btnAdd);
-		frmCalculator.getContentPane().add(btnSubtract);
-		frmCalculator.getContentPane().add(btnMultiply);
-		frmCalculator.getContentPane().add(btnDivide);
+		frameCalculator.getContentPane().add(labelFirstNumber);
+		frameCalculator.getContentPane().add(labelSecondNumber);
+		frameCalculator.getContentPane().add(labelResult);
+		
+		frameCalculator.getContentPane().add(labelBasic);
+		frameCalculator.getContentPane().add(btnAdd);
+		frameCalculator.getContentPane().add(btnSubtract);
+		frameCalculator.getContentPane().add(btnMultiply);
+		frameCalculator.getContentPane().add(btnDivide);
 
-		frmCalculator.getContentPane().add(lblAdvanced);
-		frmCalculator.getContentPane().add(btnPowerOfTwo);
-		frmCalculator.getContentPane().add(btnPowerOfThree);
-		frmCalculator.getContentPane().add(btnSquareRoot);
-		frmCalculator.getContentPane().add(btnCubeRoot);
-		frmCalculator.getContentPane().add(btnAbsoluteValue);
-		frmCalculator.getContentPane().add(btnOneDividedBy);
+		frameCalculator.getContentPane().add(labelAdvanced);
+		frameCalculator.getContentPane().add(btnPowerOfTwo);
+		frameCalculator.getContentPane().add(btnPowerOfThree);
+		frameCalculator.getContentPane().add(btnSquareRoot);
+		frameCalculator.getContentPane().add(btnCubeRoot);
+		frameCalculator.getContentPane().add(btnAbsoluteValue);
+		frameCalculator.getContentPane().add(btnOneDividedBy);
+		frameCalculator.getContentPane().add(btnRandom);
+		
+		frameCalculator.getContentPane().add(btnClearAll);
+		
 	}
 
-
+	/**
+	 * Method for adding action listeners.
+	 */
 	public void addActionListeners(){
 		btnAdd.addActionListener(this);
 		btnSubtract.addActionListener(this);
 		btnMultiply.addActionListener(this);
 		btnDivide.addActionListener(this);
-
-		/*
-		 * new listeners
-		 */
+		//advanced operations
 		btnPowerOfTwo.addActionListener(this);
 		btnPowerOfThree.addActionListener(this);
 		btnSquareRoot.addActionListener(this);
 		btnCubeRoot.addActionListener(this);
 		btnAbsoluteValue.addActionListener(this);
 		btnOneDividedBy.addActionListener(this);
+		btnRandom.addActionListener(this);
+		
+		btnClearAll.addActionListener(this);
 	}
 
-
 	/**
-	 *
-	 * get value from text field
-	 *
-	 * @return firstNUmber - Number that is written in the textfield
+	 * Method that gets the value written in the first number, or (x), text field
+	 * @return firstNumber: a double that is written by the user in the text field corresponding to the first number
 	 **/
 	public double getValueFromTextField1(){
 		double firstNumber = 0.0;
-		firstNumber = Double.valueOf(txfFirstNumber.getText());
+		firstNumber = Double.valueOf(fieldFirstNumber.getText());
 		return firstNumber;
 	}
 
+	/**
+	 * Method that gets the value written in the second number, or (y), text field
+	 * @return secondNumber: a double that is written by the user in the text field corresponding to the second number
+	 */
 	public double getValueFromTextField2(){
 		double secondNumber = 0.0;
-		secondNumber = Double.valueOf(txfSecondNumber.getText());
+		secondNumber = Double.valueOf(fieldSecondNumber.getText());
 		return secondNumber;
 	}
-
-
-
+	
+	/**
+	 * Method that performs actions when the buttons are clicked.
+	 */
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnAdd){
-			double result = cb.add(getValueFromTextField1(), getValueFromTextField2());
-			lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
+			}
+			else if (fieldSecondNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (y), please enter the second number if you want to perform a basic operation.\nOtherwise you can proceed with an advanced operation, no (y) required).");
+			}
+			else {
+				double result = cb.add(getValueFromTextField1(), getValueFromTextField2());
+				fieldResult.setText(Double.toString(result));
+			}
 		}
-
+		
 		if (e.getSource() == btnSubtract){
-			double result = cb.subtract(getValueFromTextField1(), getValueFromTextField2());
-			lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
+			}
+			else if (fieldSecondNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (y), please enter the second number if you want to perform a basic operation.\nOtherwise you can proceed with an advanced operation, no (y) required).");
+			}
+			else {
+				double result = cb.subtract(getValueFromTextField1(), getValueFromTextField2());
+				fieldResult.setText(Double.toString(result));
+			}
 		}
 
 		if (e.getSource() == btnMultiply){
-			double result = cb.multiply(getValueFromTextField1(), getValueFromTextField2());
-			lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
+			}
+			else if (fieldSecondNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (y), please enter the second number if you want to perform a basic operation.\nOtherwise you can proceed with an advanced operation, no (y) required).");
+			}
+			else {
+				double result = cb.multiply(getValueFromTextField1(), getValueFromTextField2());
+				fieldResult.setText(Double.toString(result));
+			}
 		}
 
 		if (e.getSource() == btnDivide){
-			if (getValueFromTextField2() != 0) {
-				double result = cb.divide(getValueFromTextField1(), getValueFromTextField2());
-				lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
+			}
+			else if (fieldSecondNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (y), please enter the second number if you want to perform a basic operation.\nOtherwise you can proceed with an advanced operation, no (y) required).");
+			}
+			else if (getValueFromTextField2() == 0) {
+				fieldResult.setText("Error - division by zero");	
 			}
 			else {
-				lblResult.setText("Result: ERROR-division by zero!");
+				double result = cb.divide(getValueFromTextField1(), getValueFromTextField2());
+				fieldResult.setText(Double.toString(result));
 			}
 		}
 
 		/*
-		 * new advanced functions
+		 * advanced operations
 		 */
 
 		if (e.getSource() == btnPowerOfTwo){
-			double result = ca.raisedToThePowerOf2(getValueFromTextField1());
-			lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
+			}
+			else {
+				double result = ca.raisedToThePowerOf2(getValueFromTextField1());
+				fieldResult.setText(Double.toString(result));
+			}
 		}
 
 		if (e.getSource() == btnPowerOfThree){
-			double result = ca.raisedToThePowerOf3(getValueFromTextField1());
-			lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
+			}
+			else {	
+				double result = ca.raisedToThePowerOf3(getValueFromTextField1());
+				fieldResult.setText(Double.toString(result));
+			}
 		}
 
 		if (e.getSource() == btnSquareRoot){
-			double result = ca.squareRoot(getValueFromTextField1());
-			lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
+			}
+			else {
+				double result = ca.squareRoot(getValueFromTextField1());
+				if (result == -0.123456789) {
+					fieldResult.setText("Error - negative number");
+				}
+				else {
+					fieldResult.setText(Double.toString(result));
+				}
+			}
 		}
 
 		if (e.getSource() == btnCubeRoot){
-			double result = ca.cubeRoot(getValueFromTextField1());
-			lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
+			}
+			else {
+				double result = ca.cubeRoot(getValueFromTextField1());
+				fieldResult.setText(Double.toString(result));
+			}
 		}
 
 		if (e.getSource() == btnAbsoluteValue){
-			double result = ca.absoluteValue(getValueFromTextField1());
-			lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
+			}
+			else {
+				double result = ca.absoluteValue(getValueFromTextField1());
+				fieldResult.setText(Double.toString(result));
+			}
 		}
 
 		if (e.getSource() == btnOneDividedBy){
-			double result = ca.oneDividedBy(getValueFromTextField1());
-			if (result != -0.123456789) {
-				lblResult.setText("Result: "+result);
+			if (fieldFirstNumber.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Empty field for (x), please enter the first number if you want to perform any operation.");
 			}
 			else {
-				lblResult.setText("Result: ERROR-division by zero!");
+				double result = ca.oneDividedBy(getValueFromTextField1());
+				if (result == -0.123456789) {
+					fieldResult.setText("Error - division by zero");
+				}
+				else {
+					fieldResult.setText(Double.toString(result));
+				}
 			}
 		}
-
+		
+		if (e.getSource() == btnRandom){
+			fieldResult.setText(Double.toString(ca.randomNumberBetween0and1()));
+			fieldFirstNumber.setText("");
+			fieldSecondNumber.setText("");
+		}
+		
+		if (e.getSource() == btnClearAll){
+			fieldFirstNumber.setText("");
+			fieldSecondNumber.setText("");
+			fieldResult.setText("");
+		}
+		
 	}
-
 }

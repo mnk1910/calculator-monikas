@@ -7,7 +7,7 @@ import com.project.maven.calculator_monikas.interfaces.CalculatorAdvancedOperati
  * it implements an interface CalculatorAdvancedOperationsInterface and
  * contains six methods that perform advanced mathematical operations
  * @author Monika - mnk1910
- *
+ * @version 1.0
  */
 
 <span class="fc" id="L13">public class CalculatorAdvanced extends CalculatorBasic implements CalculatorAdvancedOperationsInterface {</span>
@@ -15,74 +15,80 @@ import com.project.maven.calculator_monikas.interfaces.CalculatorAdvancedOperati
 	/**
 	 * raisedToThePowerOf2 method - raises a double number to the power of 2
 	 * @param base: the number to be raised to the power of 2 as a double
-	 * 
+	 *
 	 * @return: a double as the result of raising to the power of 2
 	 */
 	public double raisedToThePowerOf2(double base) {
 <span class="fc" id="L22">		return Math.pow(base, 2.0);</span>
 	}
-	
+
 	/**
 	 * raisedToThePowerOf3 method - raises a double number to the power of 3
 	 * @param base: the number to be raised to the power of 3 as a double
-	 * 
+	 *
 	 * @return: a double as the result of raising to the power of 3
 	 */
 	public double raisedToThePowerOf3(double base) {
 <span class="fc" id="L32">		return Math.pow(base, 3.0);</span>
 	}
-	
+
 	/**
 	 * squareRoot - method that returns the correctly rounded positive square root of a double value
 	 * @param number: a double
-	 * @return: a double
+	 * @return result: a double
 	 */
 	public double squareRoot(double number) {
-<span class="fc" id="L41">		return Math.sqrt(number);</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">		if (number &lt; 0) {</span>
+			//System.out.println(&quot;Negative number? Operation can not be performed.&quot;);
+<span class="fc" id="L43">			return -0.123456789;</span>
+		}
+		else {
+<span class="fc" id="L46">			double result = Math.sqrt(number);</span>
+<span class="fc" id="L47">			return result;</span>
+		}
 	}
-	
+
 	/**
 	 * cubeRoot - method that returns the cube root of a double value
 	 * @param number: a double
 	 * @return: a double
 	 */
 	public double cubeRoot(double number) {
-<span class="fc" id="L50">		return Math.cbrt(number);</span>
+<span class="fc" id="L57">		return Math.cbrt(number);</span>
 	}
-	
+
 	/**
 	 * abs - method that returns the absolute value of a double value
 	 * @param number: the argument whose absolute value is to be determined
 	 * @return: the absolute value of the argument as a double
 	 */
 	public double absoluteValue(double number) {
-<span class="fc" id="L59">		return Math.abs(number);</span>
+<span class="fc" id="L66">		return Math.abs(number);</span>
 	}
-	
+
 	/**
 	 * oneDividedByValue - method that returns the result of 1 divided by a double value
 	 * @param value: a double that is the dividend to 1
-	 * @return: the division between 1 and a value, as a double 
+	 * @return result: the division between 1 and a value, as a double
 	 */
 	public double oneDividedBy(double value) {
-<span class="fc" id="L68">		double result = 1/value;</span>
-<span class="fc bfc" id="L69" title="All 2 branches covered.">		if (value == 0) {</span>
-			//JOptionPane.showMessageDialog(null, &quot;Operation not possible, division by zero!&quot;, &quot;Error message&quot;, JOptionPane.ERROR_MESSAGE);
-<span class="fc" id="L71">			System.out.println(&quot;Division by zero?&quot;);</span>
-<span class="fc" id="L72">			return -0.123456789;</span>
+<span class="fc" id="L75">		double result = 1/value;</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">		if (value == 0) {</span>
+			//System.out.println(&quot;Division by zero?&quot;);
+<span class="fc" id="L78">			return -0.123456789;</span>
 		}
-<span class="fc" id="L74">		return result;</span>
+<span class="fc" id="L80">		return result;</span>
 	}
-	
-	/*
+
+	/**
 	 * randomNumber - method that returns a pseudorandom double
 	 * @param none
 	 * @return: a double greater than or equal to 0.0 and less than 1.0
 	 */
-	/*
+
 	public double randomNumberBetween0and1() {
-		return Math.random();
+<span class="fc" id="L90">		return Math.random();</span>
 	}
-	*/
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

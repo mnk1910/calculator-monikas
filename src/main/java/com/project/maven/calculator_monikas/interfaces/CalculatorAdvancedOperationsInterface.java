@@ -54,5 +54,5 @@ public interface CalculatorAdvancedOperationsInterface {
 	 * double greater than or equal to 0.0 and less than 1.0
 	 * @param none
 	 */
-	//public double randomNumberBetween0and1();
+	public double randomNumberBetween0and1();
 }

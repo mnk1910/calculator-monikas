@@ -7,7 +7,7 @@ import com.project.maven.calculator_monikas.interfaces.CalculatorAdvancedOperati
  * it implements an interface CalculatorAdvancedOperationsInterface and
  * contains six methods that perform advanced mathematical operations
  * @author Monika - mnk1910
- *
+ * @version 1.0
  */
 
 public class CalculatorAdvanced extends CalculatorBasic implements CalculatorAdvancedOperationsInterface {
@@ -35,10 +35,17 @@ public class CalculatorAdvanced extends CalculatorBasic implements CalculatorAdv
 	/**
 	 * squareRoot - method that returns the correctly rounded positive square root of a double value
 	 * @param number: a double
-	 * @return: a double
+	 * @return result: a double
 	 */
 	public double squareRoot(double number) {
-		return Math.sqrt(number);
+		if (number < 0) {
+			//System.out.println("Negative number? Operation can not be performed.");
+			return -0.123456789;
+		}
+		else {
+			double result = Math.sqrt(number);
+			return result;
+		}
 	}
 
 	/**
@@ -62,26 +69,25 @@ public class CalculatorAdvanced extends CalculatorBasic implements CalculatorAdv
 	/**
 	 * oneDividedByValue - method that returns the result of 1 divided by a double value
 	 * @param value: a double that is the dividend to 1
-	 * @return: the division between 1 and a value, as a double
+	 * @return result: the division between 1 and a value, as a double
 	 */
 	public double oneDividedBy(double value) {
 		double result = 1/value;
 		if (value == 0) {
-			//JOptionPane.showMessageDialog(null, "Operation not possible, division by zero!", "Error message", JOptionPane.ERROR_MESSAGE);
-			System.out.println("Division by zero?");
+			//System.out.println("Division by zero?");
 			return -0.123456789;
 		}
 		return result;
 	}
 
-	/*
+	/**
 	 * randomNumber - method that returns a pseudorandom double
 	 * @param none
 	 * @return: a double greater than or equal to 0.0 and less than 1.0
 	 */
-	/*
+
 	public double randomNumberBetween0and1() {
 		return Math.random();
 	}
-	*/
+
 }
